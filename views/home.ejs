@@ -1,29 +1,52 @@
 <%- include("partials/header") %>
 
-<h1>IMC_APP</h1>
-
-<button><a href="/table">Data colected</a></button>
+<button class="btnx"><a href="/table">Data colected</a></button>
 
 <hr>
 
 <form method="POST", action="/calculate", name="imc">
-    Name:   <input type="text" name="name" class="form" placeholder="Enter You Name">
-    Age:    <input type="number" step="1" min="0" name="age" class="form" placeholder="Enter You Age">
-    Weight: <input type="number" step="0.01" min="0" name="weight" class="form" placeholder="Enter You Weight">
-    High:   <input type="number" step="0.01" min="0" name="high" class="form" placeholder="Enter You High">
-    <br>
-    <!-- Result: <input type="text" name="textres"> -->
-    <br>
-    <select name="gender">
-        <option value="Male">Male</option>
-        <option value="Famale">Famale</option>
-    </select>
-    <!-- <button>Calculate</button> -->
-    <input type="submit" onclick="divValues()">
+    <div class="contact-form">
+        <div class="txtb">
+            <label>Name:    </label>
+            <input type="text" name="name" class="form" placeholder="Enter You Name">
+        </div>
+
+        <div class="txtb">
+            <label>Age:     </label>
+            <input type="number" step="1" min="0" name="age" class="form" placeholder="Enter You Age">
+        </div>
+
+        <div class="txtb">
+            <label>Weight:   </label>
+            <input type="number" step="0.01" min="0" name="weight" class="form" placeholder="Enter You Weight">
+        </div>
+
+        <div class="txtb">
+            <label>High:     </label>
+            <input type="number" step="0.01" min="0" name="high" class="form" placeholder="Enter You High">
+        </div>
+
+        <div class="txtb">
+            <!-- Result: <input type="text" name="textres"> -->
+            <br>
+            <label>Gender:    </label>
+            <select name="gender">
+                <option value="Male">Male</option>
+                <option value="Famale">Famale</option>
+            </select>
+            <!-- <button>Calculate</button> -->
+        </div>
+
+        <br>
+
+        <input type="submit" class="btn">
+    </div>
 </form>
 
-<h1>Your imc is: <strong> <%= data %> </strong> </h1>
+<section>
+    <h1>Your imc is: <strong> <%= data %> </strong> (imc of the last imput) </h1>
+</section>
+
 
 <%- include("partials/footer") %>
 
- 

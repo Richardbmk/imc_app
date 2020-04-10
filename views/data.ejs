@@ -1,37 +1,40 @@
 <%- include ("partials/header") %>
 
-<button><a href="/">Go Home</a></button>
+<button class="btnx"><a href="/">Go Home</a></button>
 
-<br>
+<hr>
 
-<table border="1" cellpadding="7" cellspacing="7">
-    <tr>
-        <th width="50px">No</th>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Weiht</th>
-        <th>High</th>
-        <th>ICM</th>
-        <th>Gender</th>
-    </tr>
-    <% if(data.length) {
-        for(var i = 0; i < data.length; i++) { %>
-    <tr>
-        <td><%=(i+1)%></td>
-        <td><%= data[i].name %></td>
-        <td><%= data[i].age %></td>
-        <td><%= data[i].weight %></td>
-        <td><%= data[i].high %></td>
-        <td><%= data[i].icm %></td>
-        <td><%= data[i].gender %></td>
-    </tr>
-    <% }
-    }else{ %>
-    <tr>
-        <td colspan="3">No user</td>
-    </tr>
-    <% } %>
-</table>
+<div style="overflow-x:auto;">
+    <table border="1" cellpadding="7" cellspacing="7" class="table-form">
+        <tr>
+            <th width="50px">No</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Weiht</th>
+            <th>High</th>
+            <th>ICM</th>
+            <th>Gender</th>
+        </tr>
+        <% if(data.length) {
+            for(var i = 0; i < data.length; i++) { %>
+        <tr>
+            <td><%=(i+1)%></td>
+            <td><%= data[i].name %></td>
+            <td><%= data[i].age %></td>
+            <td><%= data[i].weight %></td>
+            <td><%= data[i].high %></td>
+            <td><%= data[i].icm %></td>
+            <td><%= data[i].gender %></td>
+        </tr>
+        <% }
+        }else{ %>
+        <tr>
+            <td colspan="3">No user</td>
+        </tr>
+        <% } %>
+    </table>
+</div>
+
 
 <%- include ("partials/footer") %>
 
