@@ -12,5 +12,3 @@ The App just take some data, makes a simple calculation and then save it into a 
 ### The second page show the table
 ![](/public/img/table.JPG)
 
-## The second page show the table
-For the deployment tecnologies I use Heroku and ClearDB to store the MySQL database. To get the full experience of the Web app, I recommend to check it out: 
